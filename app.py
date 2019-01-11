@@ -25,6 +25,7 @@ map = folium.Map(location = [38.58, -99.09],zoom_start=6, tiles = "Mapbox Bright
 feature_group = folium.FeatureGroup(name = 'Map')
 for lt, ln, el in zip(lat, lon, elevation):
     iframe = folium.IFrame(html=html % str(el), width=200, height=100)
-    feature_group.add_child(folium.Marker(location = [lt, ln], popup = folium.Popup(iframe), icon = folium.Icon(color = marker_color(el))))
+    feature_group.add_child(folium.CircleMarker(location = [lt, ln], popup = folium.Popup(iframe), 
+    radius = 8, fill_color = marker_color(el), fill_opacity = 0.8, color = 'grey')) 
 map.add_child(feature_group)
 map.save("map.html")
