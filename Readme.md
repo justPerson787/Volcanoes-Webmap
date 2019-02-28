@@ -8,5 +8,5 @@ The project has been created following Udemy python course  https://www.udemy.co
 ## Features
 The web map has following features:
 
-markers of different color depending on volcanoes height;
-a pop-up window to turn the layer of markers off and on.
+- markers of different color depending on volcanoes height;
+- a pop-up window to turn the layer of markers off and on.
