@@ -28,11 +28,6 @@ for lt, ln, el in zip(lat, lon, elevation):
     feature_group.add_child(folium.CircleMarker(location = [lt, ln], popup = folium.Popup(iframe), 
     radius = 8, fill_color = marker_color(el), fill_opacity = 0.8, color = 'grey')) 
 
-#add polygon layer
-#feature_group.add_child(folium.GeoJson(data = open('world.json', 'r', encoding = 'utf-8-sig'),
-#style_function=lambda x: {'fillColor':'yellow'}).read())
-
-
 map.add_child(feature_group)
 map.add_child(folium.LayerControl())
 map.save("map.html")
